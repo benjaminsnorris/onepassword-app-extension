@@ -94,7 +94,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param completion A completion block called with two parameters loginDictionary and error once completed. The loginDictionary reply parameter that contains the username, password and the One-Time Password if available. The error Reply parameter that is nil if the 1Password Extension has been successfully completed, or it contains error information about the completion failure.
  */
-- (void)findLoginForURLString:(nonnull NSString *)URLString forViewController:(nonnull UIViewController *)viewController sender:(nullable id)sender completion:(nullable void (^)(NSDictionary * __nullable loginDictionary, NSError * __nullable error))completion;
+- (void)findLoginForURLString:(nonnull NSString *)URLString forViewController:(nonnull UIViewController *)viewController sender:(nullable id)sender applicationActivities:(nullable NSArray<UIActivity *> *)applicationActivities completion:(nullable void (^)(NSDictionary * __nullable loginDictionary, NSError * __nullable error))completion;
 
 /*!
  Create a new login within 1Password and allow the user to generate a new password before saving.
