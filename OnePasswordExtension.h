@@ -92,6 +92,8 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param sender The sender which triggers the share sheet to show. UIButton, UIBarButtonItem or UIView. Can also be nil on iPhone, but not on iPad.
  
+ @param applicationActivities Any custom UIActivity objects defined by the application that should be displayed in the UIActivityViewController that will be presented.
+ 
  @param completion A completion block called with two parameters loginDictionary and error once completed. The loginDictionary reply parameter that contains the username, password and the One-Time Password if available. The error Reply parameter that is nil if the 1Password Extension has been successfully completed, or it contains error information about the completion failure.
  */
 - (void)findLoginForURLString:(nonnull NSString *)URLString forViewController:(nonnull UIViewController *)viewController sender:(nullable id)sender applicationActivities:(nullable NSArray<UIActivity *> *)applicationActivities completion:(nullable void (^)(NSDictionary * __nullable loginDictionary, NSError * __nullable error))completion;
